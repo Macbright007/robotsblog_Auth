@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import { Button, Container } from './components/styles';
+
 
 function App() {
+ const [showModal, setShowModal] = useState(false)
+ const [showSignModal, setShowSignModal] = useState(false)
+
+ const openModal = () => {
+    setShowModal(prev => !prev);
+    setShowSignModal(false);
+ }
+ const openSignupModal = () => {
+    setShowSignModal(prev => !prev);
+    setShowModal(false);
+ }
+
+ const handleClose = () => {
+  setShowModal(false);
+  setShowSignModal(false);
+};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h1>Welcome to Robot's Blog, Sign up to view and post content</h1>
+      <Button onClick={openModal}>Get Started.</Button>
+      <Login showModal={showModal} setShowModal={setShowModal} handleClose={handleClose} openSignupModal={openSignupModal}/>
+      {showSignModal && <SignUp handleClose = {handleClose} openModal={openModal} />}
+    </Container>
   );
 }
 
