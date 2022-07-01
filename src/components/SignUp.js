@@ -7,14 +7,14 @@ import {
     InnerSignForm,
     InnerCont
   } from "./styles";
-  import login from "../image/login.svg";
+  import secure from "../image/secure.svg";
 
 const SignUp = ({  openModal, handleClose }) => {
 
     return(
         <BgCont>
           <Wrapper>
-            <SignImg src={login} alt="pic" />
+            <SignImg src={secure} alt="pic" />
             <FormCont>
               <h1>Sign Up</h1>
               <InnerSignForm>
@@ -36,7 +36,7 @@ const SignUp = ({  openModal, handleClose }) => {
                   //   value={newUploads.title}
                   //   onChange={setUploadsDetails}
                 />
-                {/* <label htmlFor="username">username:</label>
+                <label htmlFor="username">username:</label>
                 <br />
                 <input
                   type="text"
@@ -44,7 +44,7 @@ const SignUp = ({  openModal, handleClose }) => {
                   name="username"
                   //   value={newUploads.title}
                   //   onChange={setUploadsDetails}
-                /> */}
+                />
                 <label htmlFor="email">email:</label>
                 <br />
                 <input
@@ -63,7 +63,7 @@ const SignUp = ({  openModal, handleClose }) => {
                   //   value={newUploads.title}
                   //   onChange={setUploadsDetails}
                 />
-                {/* <label htmlFor="password2">confirm-password:</label>
+                <label htmlFor="password2">confirm-password:</label>
                 <br />
                 <input
                   type="password"
@@ -71,11 +71,11 @@ const SignUp = ({  openModal, handleClose }) => {
                   name="password2"
                   //   value={newUploads.title}
                   //   onChange={setUploadsDetails}
-                /> */}
+                />
               </InnerSignForm>
 
               <InnerCont>
-                Have account? <button onClick={openModal}> Login</button>
+                Have account?<button onClick={openModal}>Login</button>
               </InnerCont>
 
               <button>Submit</button>

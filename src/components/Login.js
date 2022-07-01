@@ -7,7 +7,8 @@ import {
   InnerForm,
   InnerContent
 } from "./styles";
-import secure from "../image/secure.svg";
+// import secure from "../image/secure.svg";
+import login from "../image/login.svg";
 // import {Link } from "react-router-dom"
 
 const Login = ({ openSignupModal, showModal, handleClose }) => {
@@ -18,7 +19,7 @@ const Login = ({ openSignupModal, showModal, handleClose }) => {
       {showModal ? (
         <Background>
           <FormWrapper showModal={showModal}>
-            <FormImg src={secure} alt="pic" />
+            <FormImg src={login} alt="pic" />
             <FormContent>
               <h1>Login</h1>
               <InnerForm>
@@ -43,7 +44,7 @@ const Login = ({ openSignupModal, showModal, handleClose }) => {
               </InnerForm>
 
               <InnerContent>
-                Don't have account? <button onClick={openSignupModal}> Register</button>
+                Don't have account?<button onClick={openSignupModal}>Register</button>
               </InnerContent>
 
               <button>Submit</button>
