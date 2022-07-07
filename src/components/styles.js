@@ -39,7 +39,7 @@ export const Background = styled.div`
   align-items: center;
 `;
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
   width: 800px;
   height: 80vh;
   padding: 2px;
@@ -82,6 +82,38 @@ export const FormContent = styled.div`
     cursor: pointer;
   }
 `;
+
+export const Form = styled.form`
+border: 2px solid rgba(2, 2, 70, 0.8);
+border-left: 0;
+border-right: 0;
+border-radius: 25px;
+right: 50px;
+width: 100%;
+max-width: 300px;
+margin: 30px auto;
+height: 70vh;
+padding: 20px;
+
+
+button{
+    width:100%;
+    max-width: 250px;
+    margin: 15px 40px;
+    padding: 10px;
+    background: rgba(2, 2, 70, 0.8);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background: rgb(151, 87, 206);
+}
+`
+
 export const InnerForm = styled.div`
   padding: 5px;
 
@@ -140,7 +172,7 @@ export const BgCont = styled.div`
   align-items: center;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.form`
   width: 800px;
   height: 80vh;
   padding: 2px;
@@ -158,7 +190,7 @@ export const SignImg = styled.img`
   width: 100%;
   height: 80vh;
   border-radius: 10px 0 0 10px;
-  background: #000;
+  background: #000; 
 `;
 
 export const FormCont = styled.div`
@@ -176,7 +208,7 @@ export const FormCont = styled.div`
 
   button {
     padding: 10px 30px;
-    background: #141414;
+    background: #141414;  
     border-radius: 5px;
     color: #fff;
     border: none;
@@ -227,3 +259,57 @@ export const InnerCont = styled.div`
     font-weight: 700;
   }
 `;
+
+// styling for navbar
+export const Navitems = styled.div`
+    border: 2px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    padding: 10px;
+    position: fixed; 
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(25, 25, 25, 0.679);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+    a{
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0px 30px;
+    }
+`
+// styling for card component
+export const Card = styled.div`
+    background: rgba(2, 2, 70, 0.359);
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    border: 3px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 15px;
+    padding: 10px; 
+`;
+
+export const Heading = styled.h4`
+    font-family: 'Handlee', cursive;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+ `;
+
+export const Paragraph = styled.p`
+    font-family: 'Handlee', cursive;
+    font-size: 17px;
+    // text-transform: italics;
+ `;
