@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import Navbar from "./Navbar";
 import BlogCard from "./BlogCard";
 
 
@@ -21,7 +20,7 @@ const Blog = () => {
 
     return (
         <div>
-            <Navbar />
+            
             {posts.map((post) => {
                 return (
                     <BlogCard key={post?.id} author={post?.author} title={post?.title} content={post?.content}/>

@@ -2,12 +2,17 @@ import { useState } from "react";
 import { Form, InnerForm } from "./styles";
 import { URL } from "./Home";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const detailsInitialValue = { author: "", title: "", content: "" };
 
 const CreateBlog = () => {
   const [details, setDetails] = useState(detailsInitialValue);
   const [loading, setLoading] = useState(false);
+
+
+  //used to redirect to home page
+  let navigate = useNavigate();
 
   //function to set details
   const setPostDetails = (e) => {
@@ -19,9 +24,10 @@ const CreateBlog = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const result = await Axios.post(URL, details);
+      const result = await Axios.post(`${URL}/postblogs`, details);
       if (result?.status === 200) {
         setLoading(false);
+        return navigate("/", { replace: true });
       }
     } catch {
       setLoading(false);

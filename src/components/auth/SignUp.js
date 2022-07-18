@@ -6,12 +6,11 @@ import {
   Wrapper,
   InnerSignForm,
   InnerCont,
-} from "./styles";
-import secure from "../image/secure.svg";
+} from "../styles";
+import secure from "../../image/secure.svg";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-import { URL } from "./Home";
+import { URL } from "../Home";
 
 
 // initializing user values
@@ -29,8 +28,6 @@ const SignUp = ({ openModal, handleClose }) => {
   const [userinfos, setUserInfos] = useState(userInitialValues);
   const [loading, setLoading] = useState(false);
 
-  //used to redirect to home page
-  // let navigate = useNavigate();
 
   // fucntion to get user details
   const setUserDetails = async (e) => {

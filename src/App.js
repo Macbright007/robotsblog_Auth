@@ -1,8 +1,10 @@
 import { useState } from "react";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
 import { Button, Container } from "./components/styles";
 import Home from "./components/Home"
+import Navbar from "./components/Navbar";
+
 
 import {
   Routes,
@@ -37,11 +39,14 @@ function App() {
   return (
     <Container>
       {isauthenticated ? (
+        <div>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create-blog" element={<CreateBlog />} />
           {/* <Route path="/profile/:id" element={<Profile />} /> */}
         </Routes>
+        </div>
       ) : (
         <>
           <h1>Welcome to Robot's Blog, Sign up to view and post content</h1>
